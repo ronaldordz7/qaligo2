@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { storage } from "@/lib/storage"
+import { imageConfig } from "@/lib/image-config"
 import type { User } from "@/lib/types"
 import { ShoppingCart, LogOut, Menu, X } from "lucide-react"
 
@@ -45,8 +46,11 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-            {/* CUSTOMIZE: Replace with your logo URL */}
-            <img src="/your-logo.png" alt="QaliGo" className="w-8 h-8 object-contain" />
+            <img
+              src={imageConfig.logo || "/placeholder.svg"}
+              alt="QaliGo"
+              className="w-8 h-8 object-contain rounded-full"
+            />
             <span className="text-gray-900">QaliGo</span>
           </Link>
 

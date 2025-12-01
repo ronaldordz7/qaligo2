@@ -7,6 +7,7 @@ import type { Dish, CartItem } from "@/lib/types"
 import { storage } from "@/lib/storage"
 import { DishCustomizer } from "@/components/dish-customizer"
 import { ChevronLeft, AlertCircle } from "lucide-react"
+import { getDishImage } from "@/lib/image-config"
 
 export default function DishDetailPage() {
   const params = useParams()
@@ -87,24 +88,10 @@ export default function DishDetailPage() {
           <div className="flex flex-col gap-4">
             <div className="relative w-full aspect-square overflow-hidden rounded-xl bg-muted shadow-lg">
               <img
-                src={`/.jpg?key=xtgq2&height=500&width=500&query=${dish.name}`}
+                src={getDishImage(dish.id) || "/placeholder.svg"}
                 alt={dish.name}
                 className="w-full h-full object-cover"
               />
-            </div>
-            <div className="grid grid-cols-3 gap-2">
-              {[1, 2, 3].map((i) => (
-                <button
-                  key={i}
-                  className="aspect-square rounded-lg bg-muted hover:ring-2 ring-green-600 transition overflow-hidden"
-                >
-                  <img
-                    src={`/ceholder-svg-key-xtgq.jpg?key=xtgq${i}&height=100&width=100&query=${dish.name}`}
-                    alt={`${dish.name} view ${i}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
             </div>
           </div>
 

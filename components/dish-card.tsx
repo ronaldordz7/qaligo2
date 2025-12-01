@@ -4,6 +4,7 @@ import Link from "next/link"
 import type { Dish } from "@/lib/types"
 import { Heart, Plus } from "lucide-react"
 import { useState } from "react"
+import { getDishImage } from "@/lib/image-config"
 
 interface DishCardProps {
   dish: Dish
@@ -18,7 +19,7 @@ export function DishCard({ dish, onAddToCart }: DishCardProps) {
       <Link href={`/dish/${dish.id}`} className="block">
         <div className="relative h-56 w-full overflow-hidden bg-gray-100">
           <img
-            src={`/.jpg?height=224&width=280&query=${dish.name}`}
+            src={getDishImage(dish.id) || "/placeholder.svg"}
             alt={dish.name}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
           />
