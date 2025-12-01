@@ -1,7 +1,7 @@
 export const imageConfig = {
   // Dish images - Replace these URLs with your public image links
   dishes: {
-    buddhaBowl: "https://cdn.loveandlemons.com/wp-content/uploads/2020/06/IMG_25462-580x791.jpg",
+    buddhaBowl: "/https://cdn.loveandlemons.com/wp-content/uploads/2020/06/IMG_25462-580x791.jpg",
     greenWrap: "/healthy-green-wrap-with-chicken-and-vegetables.jpg",
     kaleSalad: "/fresh-kale-salad-with-apples-and-grilled-chicken.jpg",
     smoothie: "/vibrant-berry-protein-smoothie-in-glass.jpg",
