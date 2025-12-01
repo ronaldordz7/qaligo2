@@ -13,7 +13,7 @@ export const imageConfig = {
   },
 
   // Logo - Change to your logo URL
-  logo: "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=40&h=40&fit=crop",
+  logo: "public\WhatsApp Image 2025-11-26 at 9.42.59 PM (1).jpeg",
 
   // Hero image
   hero: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&h=400&fit=crop",
